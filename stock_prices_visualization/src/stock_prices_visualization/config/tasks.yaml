@@ -1,0 +1,29 @@
+finder_task:
+  description: >
+    Find the stock name for {topic}.
+    Make sure you find the period given by {start_date} to {end_date}.
+    keep the information relevant the current year is {current_year}.
+  expected_output: >
+    The corrected stock name, the period between {start_date} and {end_date}. only.
+    Formatted as markdown without '```'
+  agent: finder
+
+analyst_task:
+  description: >
+    Create a detailed stock analysis report based on the data given to you from the finder agent.
+    keep the information relevant the current year is {current_year}.
+  expected_output: >
+    A fully fledged analysis insights, explaining whether it is good to invest in this company.
+    Formatted as markdown without '```'
+  agent: analyst
+
+reporter_task:
+  description: >
+    Create a detailed stock analysis report based on the data given to you from the previous agents.
+    Make sure you include the stock_chart.png at the end of the report.
+    keep the information relevant the current year is {current_year}.
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of information.
+    Add the stock_chart.png at the end of the report.
+    Formatted as markdown without '```'
+  agent: reporter
