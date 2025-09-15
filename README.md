@@ -26,7 +26,7 @@ A project that uses **CrewAI** + **yfinance** + **search tools** to fetch, analy
 
 ## ⚙️ Setup
 
-+++bash
+```bash
 # Clone repo
 git clone https://github.com/MarwanAbdellah/CrewAI_For_Stock_Prices_Visualization.git
 cd CrewAI_For_Stock_Prices_Visualization/stock_prices_visualization
@@ -38,7 +38,7 @@ source .venv/bin/activate     # on Unix/macOS
 
 # Install dependencies
 pip install crewai yfinance matplotlib crewai_tools python-dotenv
-+++
+```
 
 - Make sure your `.env` has keys like `MODEL`, `GEMINI_API_KEY`, `SERPER_API_KEY`.  
 - Ensure `matplotlib` is installed, as it’s used for chart generation.
@@ -47,9 +47,9 @@ pip install crewai yfinance matplotlib crewai_tools python-dotenv
 
 ## 🚀 Running it
 
-+++bash
+```bash
 crewai run
-+++
+```
 
 - You’ll be prompted for a stock (ticker or company name), start and end dates.  
 - The workflow will run through agents: finder → analyst → reporter.  
