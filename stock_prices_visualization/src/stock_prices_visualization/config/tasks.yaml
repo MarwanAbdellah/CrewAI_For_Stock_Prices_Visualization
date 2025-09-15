@@ -2,7 +2,6 @@ finder_task:
   description: >
     Find the stock name for {topic}.
     Make sure you find the period given by {start_date} to {end_date}.
-    keep the information relevant the current year is {current_year}.
   expected_output: >
     The corrected stock name, the period between {start_date} and {end_date}. only.
     Formatted as markdown without '```'
@@ -23,7 +22,8 @@ reporter_task:
     Make sure you include the stock_chart.png at the end of the report.
     keep the information relevant the current year is {current_year}.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
+    A fully fledged report with the main topics, each with a full section of information. in a json format. so you can easily convert it to a pdf.
+    compare it to other famouse stocks in the same sector. and recommend whether to invest or not. while giving examples for each point.
     Add the stock_chart.png at the end of the report.
     Formatted as markdown without '```'
   agent: reporter
